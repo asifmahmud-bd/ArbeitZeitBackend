@@ -1,0 +1,32 @@
+version: '3.4'
+
+services:
+
+  arbeitzeitdb:
+    image: postgres
+
+  pgadmin:
+    image: dpage/pgadmin4
+
+  identityservice.api:
+    image: ${DOCKER_REGISTRY-}identityservice
+    build:
+      context: .
+      dockerfile: Services/Identity/IdentityService.Api/Dockerfile
+
+  attendance.api:
+    image: ${DOCKER_REGISTRY-}attendance
+    build:
+      context: .
+      dockerfile: Services/Employee/Attendance/Attendance.Api/Dockerfile
+
+  ocelotapigateway.mobile:
+    image: ${DOCKER_REGISTRY-}ocelotapigateway
+    build:
+      context: .
+      dockerfile: ApiGateways/ApiGateway.Mobile/OcelotApiGateway.Mobile/Dockerfile
+
+volumes:
+  postgres_data:
+  pgadmin_data:
+

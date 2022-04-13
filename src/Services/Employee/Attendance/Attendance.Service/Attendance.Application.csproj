@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="MediatR" />
+    <None Remove="Domain\" />
+    <None Remove="Features\" />
+    <None Remove="Features\DailyEntry\Commands\" />
+    <None Remove="Features\DailyEntry\Querys\" />
+    <None Remove="Features\DailyEntry\Handlers\" />
+    <None Remove="Features\Attendance\" />
+    <None Remove="Features\Attendance\Command\" />
+    <None Remove="Features\Attendance\Query\" />
+    <None Remove="Repositories\" />
+    <None Remove="Microsoft.Extensions.DependencyInjection" />
+    <None Remove="MediatR.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="Dapper" />
+    <None Remove="Npgsql" />
+    <None Remove="AutoMapper" />
+    <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="PipelineBehaviours\" />
+    <None Remove="FluentValidation.DependencyInjectionExtensions" />
+    <None Remove="FluentValidation" />
+    <None Remove="Features\Validator\" />
+    <None Remove="Microsoft.Extensions.Configuration.Abstractions" />
+    <None Remove="Microsoft.Extensions.Logging.Abstractions" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+    <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="Npgsql" Version="6.0.3" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="10.4.0" />
+    <PackageReference Include="FluentValidation" Version="10.4.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Domain\" />
+    <Folder Include="Features\" />
+    <Folder Include="Features\Attendance\" />
+    <Folder Include="Features\Attendance\Commands\" />
+    <Folder Include="Features\Attendance\Querys\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="PipelineBehaviours\" />
+    <Folder Include="Features\Validators\" />
+  </ItemGroup>
+</Project>

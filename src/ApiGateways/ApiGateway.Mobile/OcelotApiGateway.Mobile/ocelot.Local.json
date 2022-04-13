@@ -1,0 +1,46 @@
+﻿{
+  //TODO: Some configuration still pending
+  "Routes": [
+    //Attendance.Api
+    {
+      "DownstreamPathTemplate": "/api/v1/Attendance",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/Attendance",
+      "UpstreamHttpMethod": [ "POST", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    //IdentityService.Api
+    {
+      "DownstreamPathTemplate": "/api/v1/Login",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5000
+        }
+      ],
+      "UpstreamPathTemplate": "/Login",
+      "UpstreamHttpMethod": [ "POST", "GET" ],
+      "RouteIsCaseSensitive": false,
+      "FileCacheOptions": {
+        "TtlSeconds": 15
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:5010"
+  }
+}

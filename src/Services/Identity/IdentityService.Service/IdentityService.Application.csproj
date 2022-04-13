@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Npgsql" />
+    <None Remove="MediatR.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="Repositories\" />
+    <None Remove="Dapper" />
+    <None Remove="Domain\" />
+    <None Remove="Features\" />
+    <None Remove="Features\UserLog\" />
+    <None Remove="Features\UserLog\Commands\" />
+    <None Remove="Features\UserLog\Querys\" />
+    <None Remove="Features\UserLog\Handlers\" />
+    <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="Microsoft.Extensions.Configuration.Abstractions" />
+    <None Remove="Exception\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Npgsql" Version="6.0.3" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+    <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="6.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repositories\" />
+    <Folder Include="Domain\" />
+    <Folder Include="Features\" />
+    <Folder Include="Features\UserLog\" />
+    <Folder Include="Features\UserLog\Commands\" />
+    <Folder Include="Features\UserLog\Querys\" />
+    <Folder Include="Features\UserLog\Handlers\" />
+    <Folder Include="Exception\" />
+  </ItemGroup>
+</Project>

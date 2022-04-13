@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <DockerComposeProjectPath>../../../../docker-compose.dcproj</DockerComposeProjectPath>
+    <UserSecretsId>ed0895e7-edd1-4b16-9387-259f32ce5069</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Extensions\" />
+    <None Remove="Swashbuckle.AspNetCore" />
+    <None Remove="Dapper" />
+    <None Remove="Npgsql" />
+    <None Remove="MediatR.Extensions.Microsoft.DependencyInjection" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Extensions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="Npgsql" Version="6.0.3" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Attendance.Service\Attendance.Application.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
